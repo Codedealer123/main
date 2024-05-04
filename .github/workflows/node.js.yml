@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version: [20.12.2]
-        npm-version: [8.5.9]
+        npm-version: [10.7.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -27,5 +27,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
+    - run: npm install codecov uuid
     - run: npm start
